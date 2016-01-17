@@ -1,0 +1,107 @@
+"Phrases"
+{
+	"color_normal"
+	{
+		"en"			"normal"
+	}
+	"color_black"
+	{
+		"en"			"black"
+	}
+	"color_red"
+	{
+		"en"			"red"
+	}
+	"color_green"
+	{
+		"en"			"green"
+	}
+	"color_blue"
+	{
+		"en"			"blue"
+	}
+	"color_yellow"
+	{
+		"en"			"yellow"
+	}
+	"color_purple"
+	{
+		"en"			"purple"
+	}
+	"color_cyan"
+	{
+		"en"			"cyan"
+	}
+	"color_orange"
+	{
+		"en"			"orange"
+	}
+	"color_pink"
+	{
+		"en"			"pink"
+	}
+	"color_olive"
+	{
+		"en"			"olive"
+	}
+	"color_lime"
+	{
+		"en"			"lime"
+	}
+	"color_violet"
+	{
+		"en"			"violet"
+	}
+	"color_lightblue"
+	{
+		"en"			"lightblue"
+	}
+	"color_silver"
+	{
+		"en"			"silver"
+	}
+	"color_chocolate"
+	{
+		"en"			"chocolate"
+	}
+	"color_saddlebrown"
+	{
+		"en"			"saddlebrown"
+	}
+	"color_indigo"
+	{
+		"en"			"indigo"
+	}
+	"color_ghostwhite"
+	{
+		"en"			"ghostwhite"
+	}
+	"color_thistle"
+	{
+		"en"			"thistle"
+	}
+	"color_aliceblue"
+	{
+		"en"			"aliceblue"
+	}
+	"color_steelblue"
+	{
+		"en"			"steelblue"
+	}
+	"color_teal"
+	{
+		"en"			"teal"
+	}
+	"color_gold"
+	{
+		"en"			"gold"
+	}
+	"color_tan"
+	{
+		"en"			"tan"
+	}
+	"color_tomato"
+	{
+		"en"			"tomato"
+	}
+}
