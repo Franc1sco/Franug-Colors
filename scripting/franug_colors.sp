@@ -8,7 +8,7 @@
 
 new bool:g_bZombieMode = false;
 
-#define DATA "1.1"
+#define DATA "1.2"
 
 public Plugin:myinfo =
 {
@@ -36,7 +36,7 @@ public OnPluginStart()
 	CreateConVar("sm_fcolors_version", DATA, "", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_REPLICATED|FCVAR_NOTIFY);
 	
 	c_color = RegClientCookie("Colors", "Colors", CookieAccess_Private);
-	RegAdminCmd("sm_colors", Colores, ADMFLAG_GENERIC);
+	RegConsoleCmd("sm_colors", Colores);
 	
 	HookEvent("player_hurt", Playerh);
 	HookEvent("player_spawn", Playerh2);
