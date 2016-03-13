@@ -6,9 +6,9 @@
 #undef REQUIRE_PLUGIN
 #include <zombiereloaded>
 
-new bool:g_bZombieMode = false;
+#define DATA "1.3"
 
-#define DATA "1.2"
+Handle timers[MAXPLAYERS + 1];
 
 public Plugin:myinfo =
 {
@@ -39,7 +39,7 @@ public OnPluginStart()
 	RegConsoleCmd("sm_colors", Colores);
 	
 	HookEvent("player_hurt", Playerh);
-	HookEvent("player_spawn", Playerh2);
+	HookEvent("player_spawn", PlayerSpawn);
 	
 	cvar_alpha = FindConVar("sv_disable_immunity_alpha");
 	
@@ -54,50 +54,58 @@ public OnPluginStart()
 		else g_color[client]  = 0;
 		
 	}
-	
-	g_bZombieMode = (FindPluginByFile("zombiereloaded")==INVALID_HANDLE?false:true);
-}
-
-public OnLibraryAdded(const String:name[])
-{
-	if(strcmp(name, "zombiereloaded")==0)
-		g_bZombieMode = true;
 }
 
 public Action:Playerh(Handle:event, const String:name[], bool:dontBroadcast)
 {
-	if(!g_bZombieMode) return;
-	
-	new client = GetClientOfUserId(GetEventInt(event, "userid"));
+	int client = GetClientOfUserId(GetEventInt(event, "userid"));
 	
 	if(g_color[client] != 0)
-		CreateTimer(0.1, Colort, client);
+	{
+		if (timers[client] != INVALID_HANDLE) KillTimer(timers[client]);
+		
+		timers[client] = CreateTimer(0.5, Colort, client);
+	}
 }
 
-public Action:Playerh2(Handle:event, const String:name[], bool:dontBroadcast)
+public Action:PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
 {
-	new client = GetClientOfUserId(GetEventInt(event, "userid"));
+	int client = GetClientOfUserId(GetEventInt(event, "userid"));
 	
 	if(g_color[client] != 0)
-		CreateTimer(2.0, Colort, client);
+	{
+		if (timers[client] != INVALID_HANDLE) KillTimer(timers[client]);
+		
+		timers[client] = CreateTimer(2.5, Colort, client);
+	}
 }
 
 public Action:Colort(Handle:timer, any:client)
 {
-	if(IsClientInGame(client) && IsPlayerAlive(client) && g_color[client] != 0) 
+	if(IsPlayerAlive(client) && g_color[client] != 0) 
 		SetEntityRenderColor(client, g_iTColors[g_color[client]][0], g_iTColors[g_color[client]][1], g_iTColors[g_color[client]][2], g_iTColors[g_color[client]][3]);
+		
+	timers[client] = INVALID_HANDLE;
 }
 
-public ZR_OnClientInfected(client, attacker, bool:motherInfect, bool:respawnOverride, bool:respawn)
+public int ZR_OnClientInfected(client, attacker, bool:motherInfect, bool:respawnOverride, bool:respawn)
 {
-	if(g_color[client] != 0) 
-		SetEntityRenderColor(client, g_iTColors[g_color[client]][0], g_iTColors[g_color[client]][1], g_iTColors[g_color[client]][2], g_iTColors[g_color[client]][3]);
+	if(g_color[client] != 0)
+	{
+		if (timers[client] != INVALID_HANDLE) KillTimer(timers[client]);
+		
+		timers[client] = CreateTimer(1.0, Colort, client);
+	}
 }
 
-public ZR_OnClientHumanPost(client, bool:respawn, bool:protect)
+public int ZR_OnClientHumanPost(client, bool:respawn, bool:protect)
 {
-	if(g_color[client] != 0) 
-		CreateTimer(1.0, Colort, client);
+	if(g_color[client] != 0)
+	{
+		if (timers[client] != INVALID_HANDLE) KillTimer(timers[client]);
+		
+		timers[client] = CreateTimer(1.0, Colort, client);
+	}
 }
 
 public OnClientCookiesCached(client)
@@ -123,6 +131,9 @@ public OnClientDisconnect(client)
 		
 		SetClientCookie(client, c_color, SprayString);
 	}
+	
+	if (timers[client] != INVALID_HANDLE) KillTimer(timers[client]);
+	timers[client] = INVALID_HANDLE;
 }
 
 
