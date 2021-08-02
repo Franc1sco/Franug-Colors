@@ -4,167 +4,169 @@
 	{
 		"en"			"normal"
 		"es"			"normal"
-		"ru"			"Стандартный"
+		"ru"			"стандартный"
 	}
 	"color_black"
 	{
 		"en"			"black"
 		"es"			"negro"
-		"ru"			"Чёрный"
+		"ru"			"чёрный"
 	}
 	"color_red"
 	{
 		"en"			"red"
 		"es"			"rojo"
-		"ru"			"Красный"
+		"ru"			"красный"
 	}
 	"color_green"
 	{
 		"en"			"green"
 		"es"			"verde"
-		"ru"			"Зелёный"
+		"ru"			"зелёный"
 	}
 	"color_blue"
 	{
 		"en"			"blue"
 		"es"			"azul"
-		"ru"			"Синий"
+		"ru"			"синий"
 	}
 	"color_yellow"
 	{
 		"en"			"yellow"
 		"es"			"amarillo"
-		"ru"			"Жёлтый"
+		"ru"			"жёлтый"
 	}
 	"color_purple"
 	{
 		"en"			"purple"
 		"es"			"morado"
-		"ru"			"Пурпурный"
+		"ru"			"пурпурный"
 	}
 	"color_cyan"
 	{
 		"en"			"cyan"
 		"es"			"cian"
-		"ru"			"Голубой"
+		"ru"			"голубой"
 	}
 	"color_orange"
 	{
 		"en"			"orange"
 		"es"			"naranja"
-		"ru"			"Оранжевый"
+		"ru"			"оранжевый"
 	}
 	"color_pink"
 	{
 		"en"			"pink"
 		"es"			"rosa"
-		"ru"			"Розовый"
+		"ru"			"розовый"
 	}
 	"color_olive"
 	{
 		"en"			"olive"
 		"es"			"olivo"
-		"ru"			"Оливковый"
+		"ru"			"оливковый"
 	}
 	"color_lime"
 	{
 		"en"			"lime"
 		"es"			"lima"
-		"ru"			"Лаймовый"
+		"ru"			"лаймовый"
 	}
 	"color_violet"
 	{
 		"en"			"violet"
 		"es"			"violeta"
-		"ru"			"Фиолетовый"
+		"ru"			"фиолетовый"
 	}
 	"color_lightblue"
 	{
 		"en"			"lightblue"
 		"es"			"azul claro"
-		"ru"			"Светло-синий"
+		"ru"			"светло-синий"
 	}
 	"color_silver"
 	{
 		"en"			"silver"
 		"es"			"plata"
-		"ru"			"Серебряный"
+		"ru"			"серебряный"
 	}
 	"color_chocolate"
 	{
 		"en"			"chocolate"
 		"es"			"chocolate"
-		"ru"			"Шоколадный"
+		"ru"			"шоколадный"
 	}
 	"color_saddlebrown"
 	{
 		"en"			"saddlebrown"
 		"es"			"marrón silla"
-		"ru"			"Коричневый"
+		"ru"			"коричневый"
 	}
 	"color_indigo"
 	{
 		"en"			"indigo"
 		"es"			"índigo"
-		"ru"			"Индиго"
+		"ru"			"индиго"
 	}
 	"color_ghostwhite"
 	{
 		"en"			"ghostwhite"
 		"es"			"blanco fantasmal"
-		"ru"			"Призрачно-белый"
+		"ru"			"призрачно-белый"
 	}
 	"color_thistle"
 	{
 		"en"			"thistle"
 		"es"			"cardo"
-		"ru"			"Чертополох"
+		"ru"			"чертополох"
 	}
 	"color_aliceblue"
 	{
 		"en"			"aliceblue"
 		"es"			"alice azul"
-		"ru"			"Бледно-голубой"
+		"ru"			"бледно-голубой"
 	}
 	"color_steelblue"
 	{
 		"en"			"steelblue"
 		"es"			"azul plateado"
-		"ru"			"Стальной синий"
+		"ru"			"стальной синий"
 	}
 	"color_teal"
 	{
 		"en"			"teal"
 		"es"			"café"
-		"ru"			"Бирюзовый"
+		"ru"			"бирюзовый"
 	}
 	"color_gold"
 	{
 		"en"			"gold"
 		"es"			"oro"
-		"ru"			"Золотой"
+		"ru"			"золотой"
 	}
 	"color_tan"
 	{
 		"en"			"tan"
 		"es"			"bronceado"
-		"ru"			"Желтовато-коричневый"
+		"ru"			"жёлтовато-коричневый"
 	}
 	"color_tomato"
 	{
 		"en"			"tomato"
 		"es"			"tomate"
-		"ru"			"Томатный"
+		"ru"			"томатный"
 	}
 	"menu_title"
 	{
 		"en"			"Choose player color"
 		"es"			"Selecciona color del jugador"
+		"ru"			"Выберите цвет игрока"
 	}
 	"choosen"
 	{
 		"#format"	"{1:s}"
 		"en"			"you have choosen {1}!"
 		"es"			"Tu has elegido {1}!"
+		"ru"			"Вы выбрали {1}!"
 	}
 }
